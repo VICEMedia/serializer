@@ -58,7 +58,7 @@ class JsonSerializationVisitor extends GenericSerializationVisitor
 
         // Force JSON output to "{}" instead of "[]" if it contains either no properties or all properties are null.
         if (empty($rs)) {
-            $rs = new \ArrayObject();
+            $rs = array();
 
             if (array() === $this->getRoot()) {
                 $this->setRoot($rs);
